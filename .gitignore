@@ -1,0 +1,5 @@
+Gemfile.lock
+.DS_Store
+.rsweb
+*.log
+settings.yml
