@@ -7,7 +7,7 @@ class ProjectTest < MiniTest::Unit::TestCase
   # === Setup the project
   #
    def setup
-    @project = Project.new
+    @project = Project.new(Dir.pwd)
   end
 
   # === Testing the project name config
