@@ -4,3 +4,4 @@ Gemfile.lock
 settings.yml
 .ruby-gemset
 .ruby-version
+doc/
