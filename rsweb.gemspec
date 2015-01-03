@@ -14,4 +14,5 @@ Gem::Specification.new do |gem_spec|
   gem_spec.add_dependency("gitlab-grit", ">=2.7")
   gem_spec.add_development_dependency("minitest")
   gem_spec.add_development_dependency("coveralls")
+  gem_spec.require_paths = ["lib"]
 end
