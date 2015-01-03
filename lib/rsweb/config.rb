@@ -24,4 +24,4 @@ module Settings
 
 end
 
-Settings.load!("settings.yml")
+Settings.load!(ENV["HOME"] + "/.rsweb/settings.yml")
