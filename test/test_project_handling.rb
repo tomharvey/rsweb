@@ -7,7 +7,7 @@ class ProjectTest < MiniTest::Unit::TestCase
   end
 
   def test_get_project_name
-    assert_equal "Project Name", @project.name
+    assert_equal "RS Web", @project.name
   end
 
   def test_get_repo_files
