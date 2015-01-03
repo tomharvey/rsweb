@@ -11,6 +11,7 @@ Gem::Specification.new do |gem_spec|
   gem_spec.homepage    = 'http://rubygems.org/gems/rsweb'
   gem_spec.license     = 'GPL-2'
   gem_spec.add_dependency("fog")
+  gem_spec.add_dependency("table_print")
   gem_spec.add_dependency("gitlab-grit", ">=2.7")
   gem_spec.add_development_dependency("minitest")
   gem_spec.add_development_dependency("coveralls")
