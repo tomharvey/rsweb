@@ -6,7 +6,7 @@
 [![security](https://hakiri.io/github/tomharvey/rsweb/master.svg)](https://hakiri.io/github/tomharvey/rsweb/master)
 [![Dependency Status](https://gemnasium.com/tomharvey/rsweb.svg)](https://gemnasium.com/tomharvey/rsweb)
 [![Code Climate](https://codeclimate.com/github/tomharvey/rsweb/badges/gpa.svg)](https://codeclimate.com/github/tomharvey/rsweb)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tomharvey/rsweb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 
 For managing the release of static websites to Rackspace's Cloudfiles object storage
 
