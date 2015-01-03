@@ -5,3 +5,4 @@ settings.yml
 .ruby-gemset
 .ruby-version
 doc/
+coverage/
