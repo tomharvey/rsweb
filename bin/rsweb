@@ -1,1 +1,8 @@
 #! /usr/bin/env ruby
+
+require 'rsweb'
+
+command = ARGV[0]
+
+RsWeb::Application.new(command)
+
