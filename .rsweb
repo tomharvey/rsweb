@@ -1,0 +1,4 @@
+#
+# YAML config specific to the project. This project only has one for testing purposes
+#
+project_name: 'RS Web'
