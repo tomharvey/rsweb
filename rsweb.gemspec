@@ -13,4 +13,5 @@ Gem::Specification.new do |gem_spec|
   gem_spec.add_dependency("fog")
   gem_spec.add_dependency("grit")
   gem_spec.add_development_dependency("minitest")
+  gem_spec.add_development_dependency("coveralls")
 end

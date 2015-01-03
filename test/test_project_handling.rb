@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'rsweb'
+require 'coveralls'
 
 # == Testing the management of local resources
 #
@@ -7,6 +8,7 @@ class ProjectTest < MiniTest::Unit::TestCase
   # === Setup the project
   #
    def setup
+    Coveralls.wear!
     @project = Project.new(Dir.pwd)
   end
 
