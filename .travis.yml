@@ -1,8 +1,5 @@
 language: ruby
 rvm:
   - 1.9
-  - 2.2
-  - 2.1
-  - 2.0
 before_script: bundle update
 script: bundle exec rake test TEST=test/test_project_handling.rb
