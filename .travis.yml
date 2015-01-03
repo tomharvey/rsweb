@@ -2,5 +2,5 @@ language: ruby
 rvm:
   - 1.9
   - 2.0
-before_install: apt-get install libicu-dev
+before_install: sudo apt-get install -qq libicu-dev
 script: bundle exec rake test TEST=test/test_project_handling.rb
