@@ -4,6 +4,6 @@ rvm:
   - 2.2
   - 2.1
   - 2.0
-before_install: touch ~/settings.yml
+before_install: mkdir ~/.rsweb/ && touch ~/.rsweb/settings.yml
 before_script: bundle update
 script: bundle exec rake test TEST=test/test_project_handling.rb
