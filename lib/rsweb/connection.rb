@@ -1,9 +1,11 @@
 require 'fog'
 
-# Handle the connection to the object storage service
+# == Handle the connection to the object storage service
 #
 class Connection
   include Logging
+
+  # The Fog::Directory container which we will be uploading to
   attr_reader :container
 
   # Create a conneciton
@@ -12,13 +14,16 @@ class Connection
     @conx = Fog::Storage.new(Settings.connection)
   end
 
-  # Manages the container used for the static website
+  # === Manages the container used for the static website
+  #
   # If no container exists with that name, a new one is created
+  #
   # If a container exists with that name it is returned.
+  #
   # <b>If a container exists with that name, but the metadata differs,
   # the metadata will be updated with the metadata argued here.</b>
   #
-  # The container becomes atached to the instance of this class
+  # The container becomes an attr of this instance.
   # 
   # * *Args*    :
   #   - +container_name+ -> String name of the container
@@ -40,8 +45,11 @@ class Connection
     @container = @conx.directories.create(options)
   end
 
-  # Uploads a file to the container attached to the instance of this class
-  # self.get_create_container must be ran first to setup the traget container.
+  # === Uploads a file
+  #
+  # Targets the container attr of this instance
+  #
+  # <b>self.get_create_container must be ran first to setup the traget container.</b>
   # 
   # * *Args*    :
   #   - +filepath+ -> String path to the file within the project
@@ -60,8 +68,8 @@ class Connection
 
   protected
 
-  # Clean the name of the file, ready for upload
-  # 
+  # === Clean the name of the file, ready for upload
+  #
   # * *Args*    :
   #   - +filepath+ -> String path to the file within the project
   # * *Returns* :

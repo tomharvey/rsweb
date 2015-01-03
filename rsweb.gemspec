@@ -7,7 +7,7 @@ Gem::Specification.new do |gem_spec|
   gem_spec.description = "Manages Static Websites served on Rackspace Cloudfiles"
   gem_spec.authors     = ["Tom Harvey"]
   gem_spec.email       = 'tom@alush.co.uk'
-  gem_spec.files       = Dir['Rakefile', '{bin,lib,test}/**/*', 'README*', 'LICENSE'] & `git ls-files -z`.split("\0")
+  gem_spec.files       = Dir['Rakefile', '{bin,lib,test,doc}/**/*', 'README*', 'LICENSE'] & `git ls-files -z`.split("\0")
   gem_spec.homepage    = 'http://rubygems.org/gems/rsweb'
   gem_spec.license     = 'GPL-2'
   gem_spec.add_dependency("fog")

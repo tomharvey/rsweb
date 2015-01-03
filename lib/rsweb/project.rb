@@ -1,12 +1,12 @@
 require 'yaml'
 require 'grit'
 
-# Manages the local files of the website project
+# == Manages the local files of the website project
 #
 class Project
   include Logging
 
-  # Setup a website project.
+  # === Setup a website project.
   #
   # * *Args*    :
   #   - +project_path+ -> String path to the project, defaults to pwd
@@ -17,7 +17,7 @@ class Project
     self.load_project_settings(project_path)
   end
 
-  # Configure the name of the website project.
+  # === Configure the name of the website project.
   # The name should be taken from a .rsweb YAML file in the project root.
   #
   # * *Returns* :
@@ -27,9 +27,10 @@ class Project
     @config["project_name"]
   end
 
-  # Get a list of files checked into git.
+  # === Get a list of files checked into git.
+  #
   # We only manage files which are checked in.
-  # 
+  #
   # * *Returns* :
   #   - An Array of filenames, relative to the project root
   #
@@ -39,7 +40,9 @@ class Project
 
   protected
 
-  # Get the project config from the .rsweb YAML file on the project root
+  # === Get the project config
+  #
+  # Taken from the .rsweb YAML file on the project root
   # 
   # * *Returns* :
   #   - A Boolean of whether the .rsweb file is commited to git
@@ -55,7 +58,9 @@ class Project
     end
   end
 
-  # Check if the .rsweb file is commited to the the repo
+  # === Check if the .rsweb file is commited to the the repo
+  #
+  # I recommend that it is so all devs deploy to the same location
   # 
   # * *Returns* :
   #   - A Boolean of whether the .rsweb file is commited to git
@@ -68,7 +73,7 @@ class Project
     return config_in_head
   end
 
-  # Get the git master tree
+  # === Get the git master tree
   # 
   # * *Args*    :
   #   - +project_path+ -> String path to the project
@@ -82,7 +87,7 @@ class Project
     end
   end
 
-  # Traverse the tree and build a list of files
+  # === Traverse the tree and build a list of files
   # 
   # * *Args*    :
   #   - +tree+ -> A Grit::Tree object to be traversed
