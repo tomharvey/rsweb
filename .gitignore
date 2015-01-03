@@ -3,3 +3,5 @@ Gemfile.lock
 .rsweb
 *.log
 settings.yml
+.ruby-gemset
+.ruby-version
