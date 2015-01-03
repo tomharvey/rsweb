@@ -1,0 +1,11 @@
+#
+# This is an example file.
+# It should live in ~/.rsweb/settings.yml for the tool to work
+#
+connection:
+    provider: Rackspace
+    rackspace_username: USERNAME
+    rackspace_api_key: API_KEY
+    rackspace_auth_url: https://lon.identity.api.rackspacecloud.com/v2.0
+    rackspace_region: :LON
+    rackspace_servicenet: false
