@@ -45,4 +45,7 @@ module Settings
 
 end
 
-Settings.load!(ENV["HOME"] + "/.rsweb/settings.yml")
+settings_file = ENV["HOME"] + "/.rsweb/settings.yml"
+if File.exists?(settings_file)
+	Settings.load!(settings_file)
+end
