@@ -4,7 +4,7 @@ require 'rsweb'
 # == Testing the management of local resources
 #
 class ProjectTest < MiniTest::Unit::TestCase
-  # === Setu the project
+  # === Setup the project
   #
    def setup
     @project = Project.new

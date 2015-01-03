@@ -8,6 +8,7 @@ class ConnectionTest < MiniTest::Unit::TestCase
   # === Setup the connection
   #
   # Along with some repeatedly used variables
+  # * *Vars*    :
   #   - +test_container_name+ -> String container name to use for testing
   #   - +index_filename+ -> String path to an HTML page for initial upload
   #   - +updated_index_filename+ -> String path to an updated versiont of the index page
@@ -91,11 +92,11 @@ class ConnectionTest < MiniTest::Unit::TestCase
 
   protected
 
-  # === Creates a name for the container testing
+  # Creates a name for the container testing
   #
   # Based on the current date and namespaced with this project
   #
-  # <b>Ensure that this doens't match anything on your account</b>
+  # <i>Ensure that this doens't match anything on your account</i>
   # 
   # * *Returns* :
   #   - A String name
