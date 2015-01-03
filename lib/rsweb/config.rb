@@ -17,13 +17,7 @@ module Settings
 	#
 	def load!(filename)
 		settings = YAML::load_file(filename)
-		settings.each do |key, value|
-			if value.class == Hash
-				value = self.symbolize(value)
-			end
-			self.instance_variable_set("@#{key}", value)
-			self.class.send(:define_method, key, proc{self.instance_variable_get("@#{key}")})
-		end
+		self.create_instance_variables(settings)
 	end
 
 	# === Converts the keys from strings to symbols
@@ -43,9 +37,29 @@ module Settings
 		return symbolized_hash
 	end
 
+	# === Create instance variables from settings
+	# 
+	# * *Args*    :
+	#   - +settings_hash+ -> The first level of the config hash
+	# * *Returns* :
+	#   - A Hash containing keys as symbols where once were strings
+	#
+	def create_instance_variables(settings_hash)
+		settings_hash.each do |key, value|
+			# Symbolise hash keys
+			if value.class == Hash
+				value = self.symbolize(value)
+			end
+			self.instance_variable_set("@#{key}", value)
+			self.class.send(:define_method, key, proc{self.instance_variable_get("@#{key}")})
+		end
+	end
+
 end
 
+# Location of the settings file
 settings_file = ENV["HOME"] + "/.rsweb/settings.yml"
+
 if File.exists?(settings_file)
 	Settings.load!(settings_file)
 end
