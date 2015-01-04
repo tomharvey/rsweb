@@ -8,7 +8,7 @@ module RsWeb
   class TestProject < MiniTest::Unit::TestCase
     # === Setup the project
     #
-     def setup
+    def setup
       Coveralls.wear!
       @project = RsWeb::Project.new(Dir.pwd)
     end
